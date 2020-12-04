@@ -63,6 +63,11 @@ button {
 
 } */
 
+.addPictureNote {
+	display: flex;
+	justify-content: center;
+}
+
 .formBox {
 	display: flex;
 	flex-direction: column;
