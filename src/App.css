@@ -22,6 +22,17 @@ button {
 	padding: 3px;
 	margin: 5px;
 }
+
+.tripbox {
+	margin: 20px;
+	border-style: groove;
+	border-color: blue;
+	padding: 10px;
+	width: 60%;
+	margin: auto;
+	border-radius: 15px;
+	box-shadow: 10px 5px 5px teal;
+}
 .App-header {
 	background-color: #282c34;
 	min-height: 100vh;
@@ -43,6 +54,14 @@ button {
 	justify-content: space-around;
 	list-style: none;
 }
+.highlighted {
+	color: red;
+}
+/* .NavBar ul li:hover {
+	background-color: teal;
+	color: white;
+
+} */
 
 .formBox {
 	display: flex;
