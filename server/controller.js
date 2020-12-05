@@ -104,9 +104,12 @@ module.exports = {
 
 	deleteANote: async (req, res) => {
 		const db = req.app.get("db");
-		const { noteid } = req.params;
+		const { tripid, noteid } = req.params;
 		const [deletedNote] = await db.delete_a_note([noteid]);
-		res.status(200).send(deletedNote);
+		let notes = [];
+		notes = await db.get_all_notes_for_a_trip([tripid]);
+
+		res.status(200).send(notes);
 	},
 
 	addAPicture: async (req, res) => {
@@ -133,9 +136,11 @@ module.exports = {
 
 	deleteAPicture: async (req, res) => {
 		const db = req.app.get("db");
-		const { pictureid } = req.params;
+		const { tripid, pictureid } = req.params;
 		const [deletedPicture] = await db.delete_a_picture([pictureid]);
-		res.status(200).send(deletedPicture);
+		let pictures = [];
+		pictures = await db.get_all_picture_for_trip([tripid]);
+		res.status(200).send(pictures);
 	},
 
 	getAPictureByPictureId: async (req, res) => {

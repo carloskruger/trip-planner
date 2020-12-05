@@ -45,13 +45,13 @@ app.get("/api/trips/:tripid/notes", ctrl.getAllNotesForATrip);
 
 app.get("/api/trips/notes/:noteid", ctrl.getANoteByNoteId);
 
-app.delete("/api/trips/notes/:noteid", ctrl.deleteANote);
+app.delete("/api/trips/notes/:tripid/:noteid", ctrl.deleteANote);
 
 app.post("/api/trips/:tripid/pictures", ctrl.addAPicture);
 
 app.get("/api/trips/:tripid/pictures", ctrl.getAllPicturesForATrip);
 
-app.delete("/api/trips/pictures/:pictureid", ctrl.deleteAPicture);
+app.delete("/api/trips/pictures/:tripid/:pictureid", ctrl.deleteAPicture);
 
 app.get("/api/trips/pictures/:pictureid", ctrl.getAPictureByPictureId);
 
