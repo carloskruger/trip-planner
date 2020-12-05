@@ -35,9 +35,7 @@ class Trip extends Component {
 			let trip = await axios.get(`/api/trips/trips/${id}`);
 			notes = await axios.get(`/api/trips/${id}/notes`);
 			pictures = await axios.get(`/api/trips/${id}/pictures`);
-			console.log("trip: ", trip.data);
-			console.log("notes: ", notes.data);
-			console.log("pictures: ", pictures.data);
+
 			this.setState({
 				id: id,
 				trip: trip.data,
@@ -60,6 +58,14 @@ class Trip extends Component {
 				`/api/trips/${this.state.id}/pictures`,
 				{ title, picture, id }
 			);
+			this.setState(
+				{
+					pictures: [...this.state.pictures, newPicture.data],
+					pic_title: "",
+					picture: "",
+				},
+				() => console.log(this.state)
+			);
 		} catch (err) {
 			alert(err);
 		}
@@ -77,6 +83,14 @@ class Trip extends Component {
 				note,
 				id,
 			});
+			this.setState(
+				{
+					notes: [...this.state.notes, newNote.data],
+					note_title: "",
+					note: "",
+				},
+				() => console.log(this.state)
+			);
 		} catch (err) {
 			alert(err);
 		}
@@ -91,7 +105,7 @@ class Trip extends Component {
 				</div>
 
 				<div className="addPictureNote">
-					<div className="formBox">
+					<div className="newstuffbox">
 						<h4>Add picture</h4>
 						<input
 							name="pic_title"
@@ -109,7 +123,7 @@ class Trip extends Component {
 						/>
 						<button onClick={(e) => this.addPicture(e)}>Add Picture</button>
 					</div>
-					<div className="formBox">
+					<div className="newstuffbox">
 						<h4>Add a Note</h4>
 						<input
 							name="note_title"
@@ -128,35 +142,39 @@ class Trip extends Component {
 						<button onClick={(e) => this.addNote(e)}>Add Note</button>
 					</div>
 				</div>
-				{this.state.pictures.map((picture, index) => (
-					<div className="tripbox" key={index}>
-						<div>
-							<span>
-								<b>{picture.title}</b>
-							</span>
+				<div className="pictureContainer">
+					{this.state.pictures.map((picture, index) => (
+						<div className="picturebox" key={index}>
+							<div>
+								<span>
+									<b>{picture.title}</b>
+								</span>
+							</div>
+							<div>
+								<img
+									src={picture.picture}
+									alt={picture.title}
+									width="30%"
+									height="30%"
+								/>
+							</div>
 						</div>
-						<div>
-							<img
-								src={picture.picture}
-								alt={picture.title}
-								width="30%"
-								height="30%"
-							/>
+					))}
+				</div>
+				<div className="noteContainer">
+					{this.state.notes.map((note, index) => (
+						<div className="notebox" key={index}>
+							<div>
+								<span>
+									<b>{note.title}</b>
+								</span>
+							</div>
+							<div>
+								<p>{note.note} </p>
+							</div>
 						</div>
-					</div>
-				))}
-				{this.state.notes.map((note, index) => (
-					<div className="tripbox" key={index}>
-						<div>
-							<span>
-								<b>{note.title}</b>
-							</span>
-						</div>
-						<div>
-							<p>{note.note} </p>
-						</div>
-					</div>
-				))}
+					))}
+				</div>
 			</div>
 		);
 	}
