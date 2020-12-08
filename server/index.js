@@ -59,7 +59,13 @@ app.get("/api/trips/trips/:tripid", ctrl.getATripByTripId);
 
 app.delete("/api/trips/trips/:tripid", ctrl.deleteATrip);
 
-app.put("/api/trips/:tripid", ctrl.updateATrip);
+app.put("/api/trips/update/:tripid", ctrl.updateATrip);
+
+app.put("/api/notes/update/:noteid", ctrl.updateANote);
+
+app.put("/api/pictures/update/:pictureid", ctrl.updateAPicture);
+
+app.put("/api/trips/complete/:tripid", ctrl.markComplete);
 
 app.listen(SERVER_PORT, () => {
 	console.log(`App is listening on ${SERVER_PORT}`);

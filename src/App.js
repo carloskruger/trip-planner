@@ -1,17 +1,22 @@
+import "./App.css";
+import routes from "./routes";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import Nav from "./components/Nav";
+import React, { Component } from "react";
 
-import './App.css';
-import routes from './routes';
-import {withRouter} from 'react-router-dom';
-import Nav from './components/Nav';
-
-function App() {
-  return (
-    <div className="App">
-      <Nav />
-       {/* {this.props.location.pathname!=='/' && <Nav/>} */}
-      { routes }
-    </div>
-  );
+class App extends Component {
+	render() {
+		return (
+			<div className="App">
+				{this.props.location.pathname !== "/" &&
+					this.props.location.pathname !== "/register" && <Nav />}
+				{routes}
+			</div>
+		);
+	}
 }
 
-export default App;
+const mapStateToProps = (state) => state;
+
+export default withRouter(connect(mapStateToProps)(App));

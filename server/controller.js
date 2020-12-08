@@ -165,32 +165,77 @@ module.exports = {
 	},
 
 	updateATrip: async (req, res) => {
+		console.log("at controller.js updateATrip");
 		const db = req.app.get("db");
 		const { tripid } = req.params;
-		let [retrievedTrip] = await db.get_a_trip([tripid]);
-		let { destination, departure_date, return_date, trip_completed } = req.body;
+		console.log(typeof tripid);
+		console.log("req.params at controller update a Trip", req.params);
 
-		if (!destination) {
-			destination = retrievedTrip.destination;
-		}
-		if (!departure_date) {
-			departure_date = retrievedTrip.departure_date;
-		}
-		if (!trip_completed) {
-			trip_completed = retrievedTrip.trip_completed;
-		}
-		if (!return_date) {
-			return_date = retrievedTrip.return_date;
-		}
+		let { destination, departure_date, return_date } = req.body;
+		console.log("req.body at controller update a trip ", req.body);
+		// let [retrievedTrip] = await db.get_a_trip([tripid]);
 
+		// if (!destination) {
+		// 	destination = retrievedTrip.destination;
+		// }
+		// if (!departure_date) {
+		// 	departure_date = retrievedTrip.departure_date;
+		// }
+		// if (!trip_completed) {
+		// 	trip_completed = retrievedTrip.trip_completed;
+		// }
+		// if (!return_date) {
+		// 	return_date = retrievedTrip.return_date;
+		// }
+		console.log("about to make db call");
 		const [updatedTrip] = await db.update_trip([
 			destination,
 			departure_date,
 			return_date,
-			trip_completed,
 			tripid,
 		]);
-
 		res.status(200).send(updatedTrip);
+	},
+
+	markComplete: async (req, res) => {
+		const db = req.app.get("db");
+		const { tripid } = req.params;
+		console.log(typeof tripid);
+		const [completedTrip] = await db.update_mark_trip_complete(tripid);
+		res.status(200).send(completedTrip);
+	},
+
+	updateANote: async (req, res) => {
+		console.log("at controller.js updateANote");
+		const db = req.app.get("db");
+		const { noteid } = req.params;
+
+		console.log("req.params at controller update a note", req.params);
+
+		let { title, note } = req.body;
+		console.log("req.body at controller update a note ", req.body);
+
+		console.log("about to make db call");
+		const [updatedNote] = await db.update_note([title, note, noteid]);
+		res.status(200).send(updatedNote);
+	},
+
+	updateAPicture: async (req, res) => {
+		console.log("at controller.js updateAPicture");
+		const db = req.app.get("db");
+		const { pictureid } = req.params;
+
+		console.log("req.params at controller update a picture", req.params);
+
+		let { title, picture } = req.body;
+		console.log("req.body at controller update a picture ", req.body);
+
+		console.log("about to make db call");
+		const [updatedPicture] = await db.update_picture([
+			title,
+			picture,
+			pictureid,
+		]);
+		res.status(200).send(updatedPicture);
 	},
 };

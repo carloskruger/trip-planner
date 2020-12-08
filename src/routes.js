@@ -11,6 +11,8 @@ import Register from "./components/Register";
 import Note from "./components/Note";
 import Picture from "./components/Picture";
 import UpdateTrip from "./components/UpdateTrip";
+import UpdateNote from "./components/UpdateNote";
+import UpdatePicture from "./components/UpdatePicture";
 
 export default (
 	<Switch>
@@ -22,7 +24,9 @@ export default (
 		<Route path="/trips/addtrip" component={AddTrip} />
 		<Route path="/trips/:tripid" component={Trip} />
 		<Route path="/trip/update/:tripid" component={UpdateTrip} />
-		<Route path="/notes/:noteid" component={Note} />
-		<Route path="/picture/:pictureid" component={Picture} />
+		<Route exact path="/notes/:noteid" component={Note} />
+		<Route exact path="/picture/:pictureid" component={Picture} />
+		<Route exact path="/note/update/:noteid" component={UpdateNote} />
+		<Route exact path="/picture/update/:pictureid" component={UpdatePicture} />
 	</Switch>
 );

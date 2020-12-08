@@ -85,13 +85,6 @@ class Planning extends Component {
 					onChange={(e) => this.changeHandler(e)}
 				/>
 				<button onClick={(e) => this.saveTrip(e)}>Save Trip</button>
-
-				<button>
-					<Link to="/" style={{ textDecoration: "none" }}>
-						{" "}
-						Cancel
-					</Link>
-				</button>
 			</div>
 		);
 	}

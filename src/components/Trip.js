@@ -3,6 +3,7 @@ import React, { Component } from "react";
 // import Picture from "./Note";
 // import Note from "./Note";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class Trip extends Component {
 	constructor() {
@@ -28,13 +29,12 @@ class Trip extends Component {
 
 	async componentDidMount() {
 		try {
-			console.log("this.props.match.params: ", this.props.match.params);
 			const id = +this.props.match.params.tripid;
 			let notes = [];
 			let pictures = [];
 			let trip = await axios.get(`/api/trips/trips/${id}`);
 			notes = await axios.get(`/api/trips/${id}/notes`);
-			console.log(notes);
+
 			pictures = await axios.get(`/api/trips/${id}/pictures`);
 
 			this.setState({
@@ -53,7 +53,7 @@ class Trip extends Component {
 
 		const { pic_title, picture, id } = this.state;
 		const title = pic_title;
-		console.log(pic_title);
+
 		try {
 			const newPicture = await axios.post(
 				`/api/trips/${this.state.id}/pictures`,
@@ -90,7 +90,7 @@ class Trip extends Component {
 
 		const { note_title, note, id } = this.state;
 		const title = note_title;
-		console.log(note_title);
+
 		try {
 			const newNote = await axios.post(`/api/trips/${this.state.id}/notes`, {
 				title,
@@ -113,8 +113,7 @@ class Trip extends Component {
 	deleteNote(id, e) {
 		e.preventDefault();
 		e.stopPropagation();
-		console.log("deleteid: ", id);
-		console.log("this.state.id: ", this.state.id);
+
 		axios.delete(`/api/trips/notes/${+this.state.id}/${+id}`).then((res) => {
 			const notes = res.data;
 			this.setState({
@@ -136,6 +135,9 @@ class Trip extends Component {
 					<p>
 						<b>Return date:</b> {this.state.trip.return_date}{" "}
 					</p>
+					<Link to={`/trip/update/${this.state.id}`}>
+						<button>Update</button>
+					</Link>
 				</div>
 
 				<div className="addPictureNote">
@@ -192,6 +194,9 @@ class Trip extends Component {
 									height="30%"
 								/>
 							</div>
+							<Link to={`/picture/update/${picture.pictureid}`}>
+								<button>Update picture</button>
+							</Link>
 							<button onClick={(e) => this.deletePicture(picture.pictureid, e)}>
 								Delete
 							</button>
@@ -209,6 +214,9 @@ class Trip extends Component {
 							<div>
 								<p>{note.note} </p>
 							</div>
+							<Link to={`/note/update/${note.noteid}`}>
+								<button>Update note</button>
+							</Link>
 							<button onClick={(e) => this.deleteNote(note.noteid, e)}>
 								Delete
 							</button>

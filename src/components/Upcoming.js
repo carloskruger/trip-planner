@@ -25,6 +25,16 @@ class Upcoming extends Component {
 		}
 	}
 
+	markComplete(id, e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		axios.put(`/api/trips/complete/${+id}`).then((res) => {
+			const trip = res.data;
+			this.props.history.push("/trips/completed");
+		});
+	}
+
 	render() {
 		return (
 			<div>
@@ -51,6 +61,9 @@ class Upcoming extends Component {
 									</span>
 									{upcoming.return_date}
 								</div>
+								<button onClick={(e) => this.markComplete(upcoming.tripid, e)}>
+									Mark as completed
+								</button>
 							</div>
 						</Link>
 					))}
