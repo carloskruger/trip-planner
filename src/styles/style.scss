@@ -1,0 +1,117 @@
+$box-background: blue;
+$border-box-color: blue;
+
+@mixin flexRow($justify) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+}
+
+@mixin flexColumn($justify) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+
+
+}
+
+.NavBar ul {
+	@include flexRow(space-around);
+
+	list-style: none;
+}
+
+
+
+.addPictureNote {
+    @include flexRow(center);
+	// justify-content: center;
+}
+
+.formBox {
+    @include flexColumn(space-around);
+  
+    align-items: center;
+	background-color:$box-background;
+	color: rgb(255, 255, 255);
+	width: 30%;
+	margin: auto;
+	border-radius: 15px;
+}
+
+.updateBox {
+	@include flexColumn(space-around);
+
+    align-items: center;
+	background-color: $box-background;
+	color: rgb(255, 255, 255);
+	width: 60%;
+	margin: auto;
+	border-radius: 15px;
+}
+.pictureContainer {
+    @include flexRow(center);
+	flex-wrap: wrap;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.notesContainer {
+
+    @include flexColumn(space-around);
+
+    align-items: center;
+    margin-top: 20px;
+}
+
+.newstuffbox {
+    @include flexColumn(space-around);
+	align-items: center;
+    justify-content: space-around;
+    width: 30%;
+	border-style: dotted;
+	color: white;
+	border-color:$border-box-color;
+	background-color: $box-background;
+	border-radius: 15px;
+	margin-right: 20px;
+}
+input {
+	padding: 3px;
+	margin: 5px;
+}
+
+button {
+	padding: 3px;
+	margin: 5px;
+}
+
+.tripbox {
+	margin: 20px;
+	border-style: groove;
+	border-color:$border-box-color;
+	padding: 10px;
+	width: 60%;
+	margin: auto;
+	border-radius: 15px;
+    box-shadow: 10px 5px 5px teal;
+    &:hover { background-color: $box-background;
+        color: white;}
+}
+
+.picturebox {
+	margin-top: 20px;
+	width: 250px;
+	border-radius: 15px;
+}
+
+.notebox {
+	width: 80%;
+	border-style: solid;
+	border-color:$border-box-color;
+    background-color: rgb(134, 210, 243);
+    &:hover { background-color:$box-background;
+    color: white;}
+	margin: auto;
+	border-radius: 5px;
+	box-shadow: 10px 5px 5px teal;
+}

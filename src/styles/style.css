@@ -1,0 +1,171 @@
+.NavBar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+.addPictureNote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: blue;
+  color: white;
+  width: 30%;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.updateBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: blue;
+  color: white;
+  width: 60%;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.pictureContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.notesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.newstuffbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  border-style: dotted;
+  color: white;
+  border-color: blue;
+  background-color: blue;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+input {
+  padding: 3px;
+  margin: 5px;
+}
+
+button {
+  padding: 3px;
+  margin: 5px;
+}
+
+.tripbox {
+  margin: 20px;
+  border-style: groove;
+  border-color: blue;
+  padding: 10px;
+  width: 60%;
+  margin: auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 5px 5px teal;
+          box-shadow: 10px 5px 5px teal;
+}
+
+.tripbox:hover {
+  background-color: blue;
+  color: white;
+}
+
+.picturebox {
+  margin-top: 20px;
+  width: 250px;
+  border-radius: 15px;
+}
+
+.notebox {
+  width: 80%;
+  border-style: solid;
+  border-color: blue;
+  background-color: #86d2f3;
+  margin: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 5px 5px teal;
+          box-shadow: 10px 5px 5px teal;
+}
+
+.notebox:hover {
+  background-color: blue;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

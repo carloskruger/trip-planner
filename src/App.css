@@ -12,55 +12,6 @@
 		animation: App-logo-spin infinite 20s linear;
 	}
 }
-.newstuffbox {
-	display: flex;
-	width: 30%;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	border-style: dotted;
-	color: white;
-	border-color: blue;
-	background-color: blue;
-	border-radius: 15px;
-	margin-right: 20px;
-}
-input {
-	padding: 3px;
-	margin: 5px;
-}
-
-button {
-	padding: 3px;
-	margin: 5px;
-}
-
-.tripbox {
-	margin: 20px;
-	border-style: groove;
-	border-color: blue;
-	padding: 10px;
-	width: 60%;
-	margin: auto;
-	border-radius: 15px;
-	box-shadow: 10px 5px 5px teal;
-}
-
-.picturebox {
-	margin-top: 20px;
-	width: 250px;
-	border-radius: 15px;
-}
-
-.notebox {
-	width: 80%;
-	border-style: solid;
-	border-color: blue;
-	background-color: rgb(134, 210, 243);
-	margin: auto;
-	border-radius: 5px;
-	box-shadow: 10px 5px 5px teal;
-}
 
 .App-header {
 	background-color: #282c34;
@@ -77,61 +28,7 @@ button {
 	color: #61dafb;
 }
 
-.NavBar ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	list-style: none;
-}
 
-.NavBar .active {
-	background-color: red;
-	color: white;
-	font-weight: bold;
-}
-
-.addPictureNote {
-	display: flex;
-	justify-content: center;
-}
-
-.formBox {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	background-color: blue;
-	color: rgb(255, 255, 255);
-	width: 30%;
-	margin: auto;
-	border-radius: 15px;
-}
-
-.updateBox {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	background-color: blue;
-	color: rgb(255, 255, 255);
-	width: 60%;
-	margin: auto;
-	border-radius: 15px;
-}
-.pictureContainer {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-.notesContainer {
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-}
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);
