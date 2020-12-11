@@ -1,10 +1,12 @@
 $box-background: blue;
 $border-box-color: blue;
+$font-used:  'Andika New Basic', sans-serif;
 
 @mixin flexRow($justify) {
     display: flex;
     flex-direction: row;
     justify-content: $justify;
+
 }
 
 @mixin flexColumn($justify) {
@@ -15,17 +17,23 @@ $border-box-color: blue;
 
 }
 
+body {
+    font-family: $font-used;
+}
+
 .NavBar ul {
 	@include flexRow(space-around);
 
-	list-style: none;
+    list-style: none;
+    
 }
 
 
 
 .addPictureNote {
     @include flexRow(center);
-	// justify-content: center;
+    // justify-content: center;
+    
 }
 
 .formBox {
@@ -36,7 +44,8 @@ $border-box-color: blue;
 	color: rgb(255, 255, 255);
 	width: 30%;
 	margin: auto;
-	border-radius: 15px;
+    border-radius: 15px;
+    
 }
 
 .updateBox {
@@ -47,13 +56,15 @@ $border-box-color: blue;
 	color: rgb(255, 255, 255);
 	width: 60%;
 	margin: auto;
-	border-radius: 15px;
+    border-radius: 15px;
+    
 }
 .pictureContainer {
     @include flexRow(center);
 	flex-wrap: wrap;
 	margin-top: 20px;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
+    
 }
 .notesContainer {
 
@@ -61,6 +72,7 @@ $border-box-color: blue;
 
     align-items: center;
     margin-top: 20px;
+    
 }
 
 .newstuffbox {

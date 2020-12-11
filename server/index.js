@@ -18,6 +18,15 @@ massive({
 	})
 	.catch((err) => console.log(err));
 
+const path = require("path");
+
+//middleware, endpoints, massive, etc...
+app.use(express.static(`${__dirname}/../build`));
+
+// app.get("*", (req, res) => {
+// 	res.sendFile(path.join(__dirname, "../build/index.html"));
+// });
+
 app.use(
 	session({
 		resave: false,

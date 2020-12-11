@@ -1,3 +1,7 @@
+body {
+  font-family: "Andika New Basic", sans-serif;
+}
+
 .NavBar ul {
   display: -webkit-box;
   display: -ms-flexbox;
