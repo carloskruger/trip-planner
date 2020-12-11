@@ -1,3 +1,10 @@
+.header {
+  background-color: blue;
+  color: white;
+  height: 10vw;
+  width: 100vw;
+}
+
 body {
   font-family: "Andika New Basic", sans-serif;
 }

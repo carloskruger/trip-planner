@@ -1,6 +1,7 @@
 $box-background: blue;
 $border-box-color: blue;
 $font-used:  'Andika New Basic', sans-serif;
+$font-color-one: white;
 
 @mixin flexRow($justify) {
     display: flex;
@@ -16,6 +17,15 @@ $font-used:  'Andika New Basic', sans-serif;
 
 
 }
+
+.header{
+    background-color: $box-background;
+    color: $font-color-one;
+    height: 10vw;
+    width: 100vw;
+}
+
+
 
 body {
     font-family: $font-used;
@@ -38,10 +48,10 @@ body {
 
 .formBox {
     @include flexColumn(space-around);
-  
+    
     align-items: center;
 	background-color:$box-background;
-	color: rgb(255, 255, 255);
+	color: $font-color-one;
 	width: 30%;
 	margin: auto;
     border-radius: 15px;
@@ -53,7 +63,7 @@ body {
 
     align-items: center;
 	background-color: $box-background;
-	color: rgb(255, 255, 255);
+	color: $font-color-one;
 	width: 60%;
 	margin: auto;
     border-radius: 15px;
@@ -81,7 +91,7 @@ body {
     justify-content: space-around;
     width: 30%;
 	border-style: dotted;
-	color: white;
+	color: $font-color-one;
 	border-color:$border-box-color;
 	background-color: $box-background;
 	border-radius: 15px;
@@ -107,7 +117,7 @@ button {
 	border-radius: 15px;
     box-shadow: 10px 5px 5px teal;
     &:hover { background-color: $box-background;
-        color: white;}
+        color: $font-color-one;}
 }
 
 .picturebox {
@@ -122,7 +132,7 @@ button {
 	border-color:$border-box-color;
     background-color: rgb(134, 210, 243);
     &:hover { background-color:$box-background;
-    color: white;}
+    color: $font-color-one;}
 	margin: auto;
 	border-radius: 5px;
 	box-shadow: 10px 5px 5px teal;
