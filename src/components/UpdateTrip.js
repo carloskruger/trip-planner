@@ -13,8 +13,8 @@ class UpdateTrip extends Component {
 	}
 
 	async componentDidMount() {
-		const { tripid } = this.props.match.params;
-		let trip = await axios.get(`/api/trips/trips/${+tripid}`);
+		const { tripid } = +this.props.match.params;
+		let trip = await axios.get(`/api/trips/trips/${tripid}`);
 		console.log("trip.data: ", trip.data);
 		this.setState({
 			destination: trip.data.destination,

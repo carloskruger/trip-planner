@@ -1,7 +1,9 @@
-$box-background: blue;
-$border-box-color: blue;
+$box-background: rgb(11, 175, 11);
+$border-box-color: green;
 $font-used:  'Andika New Basic', sans-serif;
 $font-color-one: white;
+$font-used-2: 'Luckiest Guy', cursive;
+$font-used-3: 'Montserrat', sans-serif;
 
 @mixin flexRow($justify) {
     display: flex;
@@ -19,10 +21,16 @@ $font-color-one: white;
 }
 
 .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $box-background;
     color: $font-color-one;
-    height: 10vw;
+    font-family: $font-used-2;
+
+    height: 20vw;
     width: 100vw;
+    font-size: 2em;
 }
 
 
@@ -130,7 +138,7 @@ button {
 	width: 80%;
 	border-style: solid;
 	border-color:$border-box-color;
-    background-color: rgb(134, 210, 243);
+    background-color: rgb(248, 196, 100);
     &:hover { background-color:$box-background;
     color: $font-color-one;}
 	margin: auto;

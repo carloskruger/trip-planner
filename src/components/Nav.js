@@ -17,7 +17,7 @@ class Nav extends Component {
 									: { textDecoration: "none" }
 							}
 						>
-							Trips Planning
+							Trip Planning
 						</Link>
 					</li>
 					<li>

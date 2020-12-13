@@ -160,7 +160,7 @@ class Trip extends Component {
 						<button onClick={(e) => this.addPicture(e)}>Add Picture</button>
 					</div>
 					<div className="newstuffbox">
-						<h4>Add a Note</h4>
+						<h4>Add Note</h4>
 						<input
 							name="note_title"
 							type="text"

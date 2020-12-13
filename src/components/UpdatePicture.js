@@ -27,6 +27,12 @@ class UpdatePicture extends Component {
 			console.log(err);
 		}
 	}
+	changeHandler = (e) => {
+		this.setState({
+			[e.target.name]: e.target.value,
+		});
+	};
+
 	updatePicture = async (e) => {
 		console.log("updatepicture");
 		console.log("this.state: ", this.state);

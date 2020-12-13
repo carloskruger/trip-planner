@@ -1,8 +1,19 @@
 .header {
-  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0baf0b;
   color: white;
-  height: 10vw;
+  font-family: "Luckiest Guy", cursive;
+  height: 20vw;
   width: 100vw;
+  font-size: 2em;
 }
 
 body {
@@ -48,7 +59,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: blue;
+  background-color: #0baf0b;
   color: white;
   width: 30%;
   margin: auto;
@@ -68,7 +79,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: blue;
+  background-color: #0baf0b;
   color: white;
   width: 60%;
   margin: auto;
@@ -125,8 +136,8 @@ body {
   width: 30%;
   border-style: dotted;
   color: white;
-  border-color: blue;
-  background-color: blue;
+  border-color: green;
+  background-color: #0baf0b;
   border-radius: 15px;
   margin-right: 20px;
 }
@@ -144,7 +155,7 @@ button {
 .tripbox {
   margin: 20px;
   border-style: groove;
-  border-color: blue;
+  border-color: green;
   padding: 10px;
   width: 60%;
   margin: auto;
@@ -154,7 +165,7 @@ button {
 }
 
 .tripbox:hover {
-  background-color: blue;
+  background-color: #0baf0b;
   color: white;
 }
 
@@ -167,8 +178,8 @@ button {
 .notebox {
   width: 80%;
   border-style: solid;
-  border-color: blue;
-  background-color: #86d2f3;
+  border-color: green;
+  background-color: #f8c464;
   margin: auto;
   border-radius: 5px;
   -webkit-box-shadow: 10px 5px 5px teal;
@@ -176,7 +187,7 @@ button {
 }
 
 .notebox:hover {
-  background-color: blue;
+  background-color: #0baf0b;
   color: white;
 }
 /*# sourceMappingURL=style.css.map */
