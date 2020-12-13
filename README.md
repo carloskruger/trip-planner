@@ -31,7 +31,9 @@ Logout
 
 ## Trip planning
 
-This will show you a box where you can enter a trip with a destination, ad departure date and a return date. You can save this trip by clicking the save trip button.
+This will show you a box where you can enter a trip with a destination, ad departure date and a return date. You can save this trip by clicking the save trip button. It is hosted at:
+
+[Travel App](http://tripplanneronline.com:3950/)
 
 ## Upcoming Trips
 
